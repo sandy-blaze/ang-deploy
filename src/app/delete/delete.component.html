@@ -1,0 +1,12 @@
+
+<form class="form-floating">
+    <div class="container login-block">
+        <h2 class="text-center text-secondary col-12">Delete form</h2> <br />
+        <input [(ngModel)]="email" type="email" class="input-group-text col-12" id="usermail" name="usermail" placeholder="Enter email address">
+        <button type="button" (click)="delete()" class="btn btn-primary btn-lg btn-block col-12">Delete</button>
+        <hr />
+        <button (click)="goToReg()" class="btn btn-secondary btn-lg btn-block col-12">Register</button>
+        <button (click)="goToSer()" class="btn btn-secondary btn-lg btn-block col-12">Display user</button>
+        <button (click)="goToLog()" class="btn btn-secondary btn-lg btn-block col-12">login</button>
+    </div>
+</form>

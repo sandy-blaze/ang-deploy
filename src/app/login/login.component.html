@@ -1,0 +1,31 @@
+
+
+<form class="row g-3 needs-validation" novalidate style="display: block;">
+    <h2 class="text-center text-secondary col-12">Login form</h2> <hr />
+    <div class="col-md-5 position-relative">
+        <label for="validationTooltipUsername" class="form-label">Email</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            <input type="email" name="email" [(ngModel)]="Email" class="form-control" id="validationTooltipUsername"
+                aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+                Please choose a unique and valid username.
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 position-relative">
+        <label for="validationTooltip05" class="form-label">Password</label>
+        <input type="password" name="password" [(ngModel)]="password" class="form-control" id="validationTooltip05" required>
+        <div class="alert alert-warning" role="alert" *ngIf="isInValid" >
+            Email or Password invalid
+        </div>
+    </div>
+    <div class="col-12">
+        <button class="btn btn-outline-primary col-4" (click)="loadUser()" type="submit">Submit</button>
+    </div>
+    <div class="navigate">
+        <button (click)="goToReg()" class="btn btn-outline-dark col-2">Register</button>
+        <button (click)="goToSer()" class="btn btn-outline-dark col-2">Display user</button>
+        <button (click)="goToDel()" class="btn btn-outline-dark col-2">Delete user</button>
+    </div>
+</form>

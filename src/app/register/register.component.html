@@ -1,0 +1,90 @@
+
+
+<br/>
+<br/>
+<br/>
+
+<form class="row g-3 needs-validation" novalidate>
+    <h2 class="text-center text-secondary col-6">Register Now</h2>
+    <hr/>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" required name="firstname" [(ngModel)]="firstname">
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" required name="lastname" [(ngModel)]="lastname">
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustomUsername" class="form-label">Email</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+                required placeholder="example@gmail.com" name="email" [(ngModel)]="email">
+            <div class="invalid-feedback">
+                Please choose a username.
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">Password</label>
+        <input type="password" class="form-control" id="validationCustom03" required name="password" [(ngModel)]="password"> 
+        <div class="invalid-feedback">
+            Please provide a valid password
+        </div>
+    </div>
+    <div class="col-md-6">
+        <label for="validationCustom03" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="validationCustom03" required name="cpassword" [(ngModel)]="cpassword">
+        <div class="invalid-feedback">
+            Password mismatch
+        </div>
+    </div>
+    <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">phone Number</label>
+        <input type="number" class="form-control" id="validationCustom05" required name="phoneNumber" [(ngModel)]="phoneNumber">
+        <div class="invalid-feedback">
+            Please provide a valid phoneNumber
+        </div>
+    </div>
+    <div class="col-12">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+                Agree to terms and conditions
+            </label>
+            <div class="invalid-feedback">
+                You must agree before submitting.
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div class="col-11">
+            <button class="btn btn-outline-primary" type="submit" (click)="submit()">Submit form</button>
+        </div>
+        <div class="col-1">
+            <button class="btn btn btn-outline-danger" (click)="reset()">Reset form</button>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div class="col-2">
+            <button class="btn btn-outline-dark" (click)="goToLog()">Login</button>
+        </div>
+        <div class="col-2">
+            <button class="btn btn-outline-dark" (click)="goToSer()">Display users</button>
+        </div>
+        <div class="col-1">
+            <button class="btn btn-outline-dark" (click)="goToDel()">Delete user</button>
+        </div>
+    </div>
+</form>
+
+<br/>
+<br/>
+<br/> 

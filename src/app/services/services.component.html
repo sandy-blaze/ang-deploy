@@ -1,0 +1,39 @@
+<section>
+  <br />
+  <div style="width: 90%; margin: 5%;">
+    <h4 class="text-black">User Details</h4>
+    <hr />
+    <table class="table table-hover">
+      <caption>> User details</caption>
+      <thead>
+        <tr>
+          <th>firstname</th>
+          <th>lastname</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of allUsersLocal">
+          <td>{{user.firstname}}</td>
+          <td>{{user.lastname}}</td>
+          <td>{{user.userMail}}</td>
+          <td>{{user.userPhNo}}</td>
+          <td>{{user.userPass}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="margin-left: 5%; display: flex;">
+    <div class="col-2">
+      <button class="btn btn-outline-dark" (click)="goToLog()">Login</button>
+    </div><br />
+    <div class="col-3">
+      <button class="btn btn-outline-dark" (click)="goToReg()">Register</button>
+    </div><br />
+    <div class="col-2">
+      <button class="btn btn-outline-dark" (click)="goToDel()">Delete user</button>
+    </div>
+  </div>
+</section>
